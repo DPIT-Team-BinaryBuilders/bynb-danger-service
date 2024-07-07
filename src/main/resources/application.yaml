@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    datasource:
+      platform: postgres
+      url: jdbc:postgresql://localhost:5432/dangerDB
+      username: admin
+      password: admin
+      driverClassName: org.postgresql.Driver
