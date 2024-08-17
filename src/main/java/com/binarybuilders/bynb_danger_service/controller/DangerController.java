@@ -1,21 +1,24 @@
-//package com.binarybuilders.bynb_danger_service.controller;
-//
-//import com.binarybuilders.bynb_danger_service.service.UserRequestService;
-//import org.springframework.web.bind.annotation.GetMapping;
-//import org.springframework.web.bind.annotation.PathVariable;
-//import org.springframework.web.bind.annotation.RestController;
-//
-//@RestController
-//public class DangerController {
-//
-//    private final UserRequestService userRequestService;
-//
-//    public DangerController(UserRequestService userRequestService) {
-//        this.userRequestService = userRequestService;
-//    }
-//
-//    @GetMapping("/danger/{dangerId}/user")
-//    public String getUser(@PathVariable String dangerId) {
-//        return userRequestService.getUserId(dangerId);
-//    }
-//}
+package com.binarybuilders.bynb_danger_service.controller;
+
+import com.binarybuilders.bynb_danger_service.dto.DangerCreationDto;
+import com.binarybuilders.bynb_danger_service.service.DangerService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/danger")
+public class DangerController {
+    DangerService dangerService;
+
+    public DangerController(DangerService dangerService){
+        this.dangerService = dangerService;
+    }
+
+
+    @PostMapping("/create_danger")
+    public void createDanger(@RequestBody DangerCreationDto dangerCreateDto){
+        dangerService.createDanger(dangerCreateDto);
+    }
+}
