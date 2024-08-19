@@ -10,7 +10,6 @@ import lombok.Setter;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.annotations.Type;
 import org.hibernate.type.SqlTypes;
-import org.springframework.security.core.userdetails.User;
 
 import java.time.LocalDate;
 import java.time.*;
