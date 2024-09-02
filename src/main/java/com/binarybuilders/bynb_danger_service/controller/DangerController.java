@@ -17,7 +17,7 @@ public class DangerController {
     }
 
 
-    @PostMapping("/create_danger")
+    @PostMapping("/create-danger")
     public void createDanger(@RequestBody DangerCreationDto dangerCreateDto){
         dangerService.createDanger(dangerCreateDto);
     }

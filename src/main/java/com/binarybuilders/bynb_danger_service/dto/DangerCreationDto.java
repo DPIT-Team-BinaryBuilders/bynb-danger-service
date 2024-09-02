@@ -17,4 +17,5 @@ public class DangerCreationDto {
     private Double dangerLevel;
     private String description;
     private String additionalInformation;
+    private String jwt;
 }
