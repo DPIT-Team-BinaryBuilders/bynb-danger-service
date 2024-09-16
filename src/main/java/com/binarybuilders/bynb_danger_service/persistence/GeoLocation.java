@@ -1,11 +1,11 @@
 package com.binarybuilders.bynb_danger_service.persistence;
 
-public class GeoLocation {
-    public double lat;
-    public double lng;
+import lombok.Getter;
+import lombok.Setter;
 
-    public GeoLocation(double lat, double lng) {
-        this.lat = lat;
-        this.lng = lng;
-    }
+@Getter
+@Setter
+public class GeoLocation {
+    public double latitude;
+    public double longitude;
 }
