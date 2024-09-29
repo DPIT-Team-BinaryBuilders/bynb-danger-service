@@ -32,8 +32,7 @@ public class DangerEntity {
     private double accuracy;
 
     @Column(name = "type")
-    @Enumerated(value = EnumType.STRING)
-    private DangerType type;
+    private String type;
 
     // good practice: folosim string in loc de timestamp si apoi facem conversie
     @Temporal(TemporalType.TIMESTAMP)
@@ -64,4 +63,8 @@ public class DangerEntity {
 
     @Column(name = "additional_information", length = 120)
     private String additionalInformation;
+
+    @Column(name = "rectangle_points")
+    private String rectanglePoints;
+
 }

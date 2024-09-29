@@ -1,5 +1,8 @@
 package com.binarybuilders.bynb_danger_service.persistence;
 
+import lombok.Getter;
+
+@Getter
 public class GeoLocation {
     public double lat;
     public double lng;
