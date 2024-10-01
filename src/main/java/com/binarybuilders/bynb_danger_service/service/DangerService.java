@@ -151,9 +151,10 @@ public class DangerService {
             getAllDangerByUserLocationDto.setDangerName(closestDanger.get().getName());
             getAllDangerByUserLocationDto.setLat(closestDanger.get().getDangerLocation().getLat());
             getAllDangerByUserLocationDto.setLng(closestDanger.get().getDangerLocation().getLng());
+            getAllDangerByUserLocationDto.setId(closestDanger.get().getId().intValue());
             return getAllDangerByUserLocationDto;
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No danger found");
+            return null;
         }
     }
 }

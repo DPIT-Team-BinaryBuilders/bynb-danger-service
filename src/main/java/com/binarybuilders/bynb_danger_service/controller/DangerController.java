@@ -30,7 +30,7 @@ public class DangerController {
         dangerService.createDanger(dangerCreateDto);
     }
     @GetMapping("/get")
-    public GetAllDangerByUserLocationDto getDanger(@RequestBody LocationDto userLocation){
-        return dangerService.getDangerByUserLocation(userLocation);
+    public GetAllDangerByUserLocationDto getDanger(@RequestParam Double latitude, @RequestParam Double longitude){
+        return dangerService.getDangerByUserLocation(new LocationDto(latitude, longitude));
     }
 }
